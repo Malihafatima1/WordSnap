@@ -5,24 +5,32 @@ export default function TextForm(props) {
     console.log("Uppercase is clicked " + text)
     let newText = text.toUpperCase()
     setText(newText)
+    props.showAlert("Converted to upercase!","success");
+
   }
 
   const handleLoClick = () => {
     let newText = text.toLowerCase()
     setText(newText)
+    props.showAlert("Converted to lowercase!","success");
+
   }
 
   const handleOnChange = (event) => {
     setText(event.target.value)
+    
   }
 
   const handleCopy = () => {
     navigator.clipboard.writeText(text)
-    alert("Preview text copied to clipboard!")
+    props.showAlert("Text is copied!","success");
+
   }
 
   const handleClear = () => {
     setText('')
+    props.showAlert("Text is cleared","warning");
+
   }
 
   const [isSpeaking, setIsSpeaking] = useState(false)
@@ -44,6 +52,8 @@ export default function TextForm(props) {
   } else {
     alert("Sorry, your browser does not support text-to-speech.")
   }
+  props.showAlert("Text is converted to speech ","success");
+
 }
   const [text, setText] = useState("")
 
