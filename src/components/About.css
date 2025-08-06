@@ -1,0 +1,28 @@
+.aboutus_container {
+    max-width: 600px;
+    margin: 60px auto;
+    padding: 2rem 1.5rem;
+    background: rgba(255,255,255,0.97);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(76,175,80,0.08);
+    text-align: center;
+    color: #222;
+  }
+  .aboutus_divider {
+    height: 3px;
+    width: 60px;
+    background: #4caf50;
+    border-radius: 3px;
+    margin: 16px auto;
+  }
+  .aboutus_container h1 { color: #388e3c; font-size: 2.4rem; }
+  .aboutus_container h2 { color: #4caf50; margin: 1.2em 0 0.4em; font-size: 1.25rem;}
+  .aboutus_container ul { list-style: disc inside; text-align:left; margin: 1em auto 1.5em; max-width: 400px; }
+  .aboutus_container li { margin: 0.33em 0; }
+  .aboutus_contact { margin-top: 2em; font-size: 1.1rem; }
+  .aboutus_contact a { color: #4caf50; text-decoration: underline; }
+  @media (max-width: 600px) {
+    .aboutus_container { max-width: 98vw; padding: 1.2rem 0.4rem; font-size: 0.98rem; }
+    .aboutus_divider { width: 36px; height: 2px; }
+  }
+  
